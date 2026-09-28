@@ -1,0 +1,28 @@
+--- src/data/i18n.ts
++++ src/data/i18n.ts
+@@ -1,3 +1,24 @@
+-export type Locale = 'en' | 'te' | 'hi';
++export type Locale = 'en' | 'te' | 'hi' | 'ta' | 'kn' | 'ml' | 'mr' | 'bn' | 'gu' | 'pa' | 'or' | 'as';
++
++export interface LanguageConfig {
++  code: Locale;
++  name: string;
++  nativeName: string;
++  enabled: boolean;
++  indexable: boolean;
++}
++
++export const siteLanguages: LanguageConfig[] = [
++  { code: 'en', name: 'English', nativeName: 'English', enabled: true, indexable: true },
++  { code: 'te', name: 'Telugu', nativeName: 'తెలుగు', enabled: true, indexable: true },
++  { code: 'hi', name: 'Hindi', nativeName: 'हिन्दी', enabled: true, indexable: true },
++  { code: 'ta', name: 'Tamil', nativeName: 'தமிழ்', enabled: false, indexable: false },
++  { code: 'kn', name: 'Kannada', nativeName: 'ಕನ್ನಡ', enabled: false, indexable: false },
++  { code: 'ml', name: 'Malayalam', nativeName: 'മലയാളം', enabled: false, indexable: false },
++  { code: 'mr', name: 'Marathi', nativeName: 'मराठी', enabled: false, indexable: false },
++  { code: 'bn', name: 'Bengali', nativeName: 'বাংলা', enabled: false, indexable: false },
++  { code: 'gu', name: 'Gujarati', nativeName: 'ગુજરાતી', enabled: false, indexable: false },
++  { code: 'pa', name: 'Punjabi', nativeName: 'ਪੰਜਾਬੀ', enabled: false, indexable: false },
++  { code: 'or', name: 'Odia', nativeName: 'ଓଡ଼ିଆ', enabled: false, indexable: false },
++  { code: 'as', name: 'Assamese', nativeName: 'অসমীয়া', enabled: false, indexable: false },
++];
